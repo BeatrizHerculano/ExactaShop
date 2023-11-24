@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05340F72B1153FE006036AF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05340F62B1153FE006036AF /* ProductCell.swift */; };
 		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
 		D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ProductListView.swift */; };
 		D0F9B0D02B112A500024DB61 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Product.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05340F62B1153FE006036AF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
 		D0F9B0CD2B112A500024DB61 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				D0F9B0CD2B112A500024DB61 /* ProductListView.swift */,
 				D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */,
+				D05340F62B1153FE006036AF /* ProductCell.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */,
 				D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */,
+				D05340F72B1153FE006036AF /* ProductCell.swift in Sources */,
 				D0F9B0D02B112A500024DB61 /* Product.swift in Sources */,
 				D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */,
 			);

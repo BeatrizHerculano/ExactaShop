@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 @Reducer
 struct ListProductsFeature {
-  struct State: Equatable {
+    struct State {
     var products: [Product]
   }
   enum Action {

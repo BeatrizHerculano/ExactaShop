@@ -15,24 +15,75 @@ struct ProductListView: View {
     var body: some View {
         NavigationStack {
             WithViewStore(self.store, observe: \.products) { viewStore in
-                List {
-                    ForEach(viewStore.state) { product in
-                        Text(product.name)
+                ScrollView{
+                    LazyVGrid(columns: [GridItem(spacing: 0), GridItem(spacing: 0)], spacing: 0) {
+                        ForEach(viewStore.state, id: \.style) { product in
+                            ProductCell(product: product)
+                        }
                     }
                 }
-                .navigationTitle("Products")
+                .padding()
+                
             }
+            .navigationTitle("Products")
+        }.onAppear{
+            store.send(.viewLoaded)
         }
     }
 }
 
 #Preview {
     ProductListView(store: Store(initialState:ListProductsFeature.State(products: [
-        .init(name: "testen 1"),
-        .init(name: "testen 2"),
-        .init(name: "testen 3")
+        .init(
+            name: "Produto Teste",
+            style: "123456",
+            codeColor: "123456_30",
+            colorSlug: "Cor Teste",
+            color: "Cinza",
+            onSale: false,
+            regularPrice: "R$ 199,99",
+            actualPrice: "R$ 199,99",
+            discountpercentage: "",
+            installments:  "1x R$ 49,90",
+            image: "https://d3l7rqep7l31az.cloudfront.net/images/products/20001882_008_catalog_1.jpg?",
+            sizes: [
+                .init(available: true, size: "PP", sku: "4229_1000016_0_U")
+            ]
+        ),
+        .init(
+            name: "Produto Teste",
+            style: "099877",
+            codeColor: "099877_30",
+            colorSlug: "Cor Teste",
+            color: "Cinza",
+            onSale: false,
+            regularPrice: "R$ 199,99",
+            actualPrice: "R$ 199,99",
+            discountpercentage: "",
+            installments:  "1x R$ 49,90",
+            image: "https://d3l7rqep7l31az.cloudfront.net/images/products/20001882_008_catalog_1.jpg?",
+            sizes: [
+                .init(available: true, size: "PP", sku: "4229_1000016_0_U")
+            ]
+        ),
+        .init(
+            name: "Produto Teste",
+            style: "3878347",
+            codeColor: "099877_30",
+            colorSlug: "Cor Teste",
+            color: "Cinza",
+            onSale: false,
+            regularPrice: "R$ 199,99",
+            actualPrice: "R$ 199,99",
+            discountpercentage: "",
+            installments:  "1x R$ 49,90",
+            image: "https://d3l7rqep7l31az.cloudfront.net/images/products/20001882_008_catalog_1.jpg?",
+            sizes: [
+                .init(available: true, size: "PP", sku: "4229_1000016_0_U")
+            ]
+        )
     ]) , reducer: {
         ListProductsFeature()
     }))
-        .modelContainer(for: Product.self, inMemory: true)
+        //.modelContainer(for: Product.self, inMemory: true)
 }
