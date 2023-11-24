@@ -7,12 +7,13 @@
 
 import SwiftUI
 import SwiftData
+import ComposableArchitecture
 
 @main
 struct ExactaShopApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Product.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +26,11 @@ struct ExactaShopApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductListView(
+                store: Store(initialState:ListProductsFeature.State(products: []),
+                reducer: {
+                ListProductsFeature()
+            }))
         }
         .modelContainer(sharedModelContainer)
     }

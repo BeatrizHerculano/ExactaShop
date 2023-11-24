@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
-		D0F9B0CE2B112A500024DB61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ContentView.swift */; };
-		D0F9B0D02B112A500024DB61 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Item.swift */; };
+		D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ProductListView.swift */; };
+		D0F9B0D02B112A500024DB61 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Product.swift */; };
 		D0F9B0D22B112A520024DB61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B0D12B112A520024DB61 /* Assets.xcassets */; };
 		D0F9B0D52B112A520024DB61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B0D42B112A520024DB61 /* Preview Assets.xcassets */; };
 		D0F9B0DF2B112A520024DB61 /* ExactaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */; };
 		D0F9B0E92B112A520024DB61 /* ExactaShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */; };
 		D0F9B0EB2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */; };
+		D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */; };
+		D0F9B0FF2B113C8A0024DB61 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D0F9B0FE2B113C8A0024DB61 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,8 @@
 /* Begin PBXFileReference section */
 		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
-		D0F9B0CD2B112A500024DB61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D0F9B0CF2B112A500024DB61 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D0F9B0CD2B112A500024DB61 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		D0F9B0CF2B112A500024DB61 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D0F9B0D12B112A520024DB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F9B0D42B112A520024DB61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0F9B0DA2B112A520024DB61 /* ExactaShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExactaShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,7 @@
 		D0F9B0E42B112A520024DB61 /* ExactaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExactaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITests.swift; sourceTree = "<group>"; };
 		D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F9B0FF2B113C8A0024DB61 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +100,9 @@
 		D0F9B0CA2B112A500024DB61 /* ExactaShop */ = {
 			isa = PBXGroup;
 			children = (
+				D0F9B0F72B11343E0024DB61 /* ProductList */,
 				D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */,
-				D0F9B0CD2B112A500024DB61 /* ContentView.swift */,
-				D0F9B0CF2B112A500024DB61 /* Item.swift */,
+				D0F9B0CF2B112A500024DB61 /* Product.swift */,
 				D0F9B0D12B112A520024DB61 /* Assets.xcassets */,
 				D0F9B0D32B112A520024DB61 /* Preview Content */,
 			);
@@ -130,6 +134,15 @@
 			path = ExactaShopUITests;
 			sourceTree = "<group>";
 		};
+		D0F9B0F72B11343E0024DB61 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0CD2B112A500024DB61 /* ProductListView.swift */,
+				D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +159,9 @@
 			dependencies = (
 			);
 			name = ExactaShop;
+			packageProductDependencies = (
+				D0F9B0FE2B113C8A0024DB61 /* ComposableArchitecture */,
+			);
 			productName = ExactaShop;
 			productReference = D0F9B0C82B112A500024DB61 /* ExactaShop.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +234,9 @@
 				Base,
 			);
 			mainGroup = D0F9B0BF2B112A500024DB61;
+			packageReferences = (
+				D0F9B0FD2B113C8A0024DB61 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = D0F9B0C92B112A500024DB61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,8 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F9B0CE2B112A500024DB61 /* ContentView.swift in Sources */,
-				D0F9B0D02B112A500024DB61 /* Item.swift in Sources */,
+				D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */,
+				D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */,
+				D0F9B0D02B112A500024DB61 /* Product.swift in Sources */,
 				D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0F9B0FD2B113C8A0024DB61 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0F9B0FE2B113C8A0024DB61 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0F9B0FD2B113C8A0024DB61 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0F9B0C02B112A500024DB61 /* Project object */;
 }
