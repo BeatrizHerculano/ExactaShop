@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
+		D0F9B0CE2B112A500024DB61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ContentView.swift */; };
+		D0F9B0D02B112A500024DB61 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Item.swift */; };
+		D0F9B0D22B112A520024DB61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B0D12B112A520024DB61 /* Assets.xcassets */; };
+		D0F9B0D52B112A520024DB61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B0D42B112A520024DB61 /* Preview Assets.xcassets */; };
+		D0F9B0DF2B112A520024DB61 /* ExactaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */; };
+		D0F9B0E92B112A520024DB61 /* ExactaShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */; };
+		D0F9B0EB2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0F9B0DB2B112A520024DB61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F9B0C02B112A500024DB61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0F9B0C72B112A500024DB61;
+			remoteInfo = ExactaShop;
+		};
+		D0F9B0E52B112A520024DB61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F9B0C02B112A500024DB61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0F9B0C72B112A500024DB61;
+			remoteInfo = ExactaShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
+		D0F9B0CD2B112A500024DB61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0F9B0CF2B112A500024DB61 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D0F9B0D12B112A520024DB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0F9B0D42B112A520024DB61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0F9B0DA2B112A520024DB61 /* ExactaShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExactaShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopTests.swift; sourceTree = "<group>"; };
+		D0F9B0E42B112A520024DB61 /* ExactaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExactaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITests.swift; sourceTree = "<group>"; };
+		D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0F9B0C52B112A500024DB61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0D72B112A520024DB61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0E12B112A520024DB61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0F9B0BF2B112A500024DB61 = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0CA2B112A500024DB61 /* ExactaShop */,
+				D0F9B0DD2B112A520024DB61 /* ExactaShopTests */,
+				D0F9B0E72B112A520024DB61 /* ExactaShopUITests */,
+				D0F9B0C92B112A500024DB61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F9B0C92B112A500024DB61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0C82B112A500024DB61 /* ExactaShop.app */,
+				D0F9B0DA2B112A520024DB61 /* ExactaShopTests.xctest */,
+				D0F9B0E42B112A520024DB61 /* ExactaShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0F9B0CA2B112A500024DB61 /* ExactaShop */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */,
+				D0F9B0CD2B112A500024DB61 /* ContentView.swift */,
+				D0F9B0CF2B112A500024DB61 /* Item.swift */,
+				D0F9B0D12B112A520024DB61 /* Assets.xcassets */,
+				D0F9B0D32B112A520024DB61 /* Preview Content */,
+			);
+			path = ExactaShop;
+			sourceTree = "<group>";
+		};
+		D0F9B0D32B112A520024DB61 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0D42B112A520024DB61 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0F9B0DD2B112A520024DB61 /* ExactaShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */,
+			);
+			path = ExactaShopTests;
+			sourceTree = "<group>";
+		};
+		D0F9B0E72B112A520024DB61 /* ExactaShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */,
+				D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */,
+			);
+			path = ExactaShopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0F9B0C72B112A500024DB61 /* ExactaShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F9B0EE2B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShop" */;
+			buildPhases = (
+				D0F9B0C42B112A500024DB61 /* Sources */,
+				D0F9B0C52B112A500024DB61 /* Frameworks */,
+				D0F9B0C62B112A500024DB61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExactaShop;
+			productName = ExactaShop;
+			productReference = D0F9B0C82B112A500024DB61 /* ExactaShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0F9B0D92B112A520024DB61 /* ExactaShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F9B0F12B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShopTests" */;
+			buildPhases = (
+				D0F9B0D62B112A520024DB61 /* Sources */,
+				D0F9B0D72B112A520024DB61 /* Frameworks */,
+				D0F9B0D82B112A520024DB61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0F9B0DC2B112A520024DB61 /* PBXTargetDependency */,
+			);
+			name = ExactaShopTests;
+			productName = ExactaShopTests;
+			productReference = D0F9B0DA2B112A520024DB61 /* ExactaShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0F9B0E32B112A520024DB61 /* ExactaShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F9B0F42B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShopUITests" */;
+			buildPhases = (
+				D0F9B0E02B112A520024DB61 /* Sources */,
+				D0F9B0E12B112A520024DB61 /* Frameworks */,
+				D0F9B0E22B112A520024DB61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0F9B0E62B112A520024DB61 /* PBXTargetDependency */,
+			);
+			name = ExactaShopUITests;
+			productName = ExactaShopUITests;
+			productReference = D0F9B0E42B112A520024DB61 /* ExactaShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0F9B0C02B112A500024DB61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D0F9B0C72B112A500024DB61 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D0F9B0D92B112A520024DB61 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D0F9B0C72B112A500024DB61;
+					};
+					D0F9B0E32B112A520024DB61 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D0F9B0C72B112A500024DB61;
+					};
+				};
+			};
+			buildConfigurationList = D0F9B0C32B112A500024DB61 /* Build configuration list for PBXProject "ExactaShop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0F9B0BF2B112A500024DB61;
+			productRefGroup = D0F9B0C92B112A500024DB61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0F9B0C72B112A500024DB61 /* ExactaShop */,
+				D0F9B0D92B112A520024DB61 /* ExactaShopTests */,
+				D0F9B0E32B112A520024DB61 /* ExactaShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0F9B0C62B112A500024DB61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F9B0D52B112A520024DB61 /* Preview Assets.xcassets in Resources */,
+				D0F9B0D22B112A520024DB61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0D82B112A520024DB61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0E22B112A520024DB61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0F9B0C42B112A500024DB61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F9B0CE2B112A500024DB61 /* ContentView.swift in Sources */,
+				D0F9B0D02B112A500024DB61 /* Item.swift in Sources */,
+				D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0D62B112A520024DB61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F9B0DF2B112A520024DB61 /* ExactaShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F9B0E02B112A520024DB61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F9B0EB2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift in Sources */,
+				D0F9B0E92B112A520024DB61 /* ExactaShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0F9B0DC2B112A520024DB61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0F9B0C72B112A500024DB61 /* ExactaShop */;
+			targetProxy = D0F9B0DB2B112A520024DB61 /* PBXContainerItemProxy */;
+		};
+		D0F9B0E62B112A520024DB61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0F9B0C72B112A500024DB61 /* ExactaShop */;
+			targetProxy = D0F9B0E52B112A520024DB61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D0F9B0EC2B112A520024DB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0F9B0ED2B112A520024DB61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0F9B0EF2B112A520024DB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExactaShop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0F9B0F02B112A520024DB61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExactaShop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0F9B0F22B112A520024DB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExactaShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExactaShop";
+			};
+			name = Debug;
+		};
+		D0F9B0F32B112A520024DB61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExactaShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExactaShop";
+			};
+			name = Release;
+		};
+		D0F9B0F52B112A520024DB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExactaShop;
+			};
+			name = Debug;
+		};
+		D0F9B0F62B112A520024DB61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.biaherculano.ExactaShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExactaShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0F9B0C32B112A500024DB61 /* Build configuration list for PBXProject "ExactaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F9B0EC2B112A520024DB61 /* Debug */,
+				D0F9B0ED2B112A520024DB61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F9B0EE2B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F9B0EF2B112A520024DB61 /* Debug */,
+				D0F9B0F02B112A520024DB61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F9B0F12B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F9B0F22B112A520024DB61 /* Debug */,
+				D0F9B0F32B112A520024DB61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F9B0F42B112A520024DB61 /* Build configuration list for PBXNativeTarget "ExactaShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F9B0F52B112A520024DB61 /* Debug */,
+				D0F9B0F62B112A520024DB61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0F9B0C02B112A500024DB61 /* Project object */;
+}
