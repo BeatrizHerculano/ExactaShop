@@ -8,9 +8,27 @@
 import Foundation
 import SwiftData
 
-struct Product: Equatable {
+struct Products: Codable {
+    var products: [Product]
+}
+
+struct Product: Equatable, Codable {
     static func == (lhs: Product, rhs: Product) -> Bool {
         lhs.style == rhs.style
+    }
+    enum CodingKeys: String, CodingKey {
+        case name
+        case style
+        case codeColor = "code_color"
+        case colorSlug = "color_slug"
+        case color
+        case onSale = "on_sale"
+        case regularPrice = "regular_price"
+        case actualPrice = "actual_price"
+        case discountpercentage = "discount_percentage"
+        case installments
+        case image
+        case sizes
     }
     
     var name: String
@@ -46,7 +64,7 @@ struct Product: Equatable {
         return url
     }
     
-    struct Size {
+    struct Size: Codable {
         var available: Bool
         var size: String
         var sku: String
