@@ -23,7 +23,6 @@ struct ProductCell: View {
                 ProgressView()
             }
             
-            
             Text(product.name)
                 .padding(.top, 8)
             
@@ -33,7 +32,8 @@ struct ProductCell: View {
 
         }
         .background(Color.white)
-        .border(.gray, width: 1)
+        .clipShape(.rect(cornerRadius: 10))
+        
         
         
         

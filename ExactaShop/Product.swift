@@ -11,7 +11,6 @@ import SwiftData
 struct Products: Codable {
     var products: [Product]
 }
-
 struct Product: Equatable, Codable {
     static func == (lhs: Product, rhs: Product) -> Bool {
         lhs.style == rhs.style

@@ -15,15 +15,30 @@ struct ProductListView: View {
     var body: some View {
         NavigationStack {
             WithViewStore(self.store, observe: \.products) { viewStore in
-                ScrollView{
-                    LazyVGrid(columns: [GridItem(spacing: 0), GridItem(spacing: 0)], spacing: 0) {
-                        ForEach(viewStore.state, id: \.style) { product in
-                            ProductCell(product: product)
+                Group {
+                    if(viewStore.isEmpty){
+                        ProgressView()
+                    } else{
+                        ScrollView {
+                            LazyVGrid(
+                                columns: [
+                                    GridItem(spacing: 2),
+                                    GridItem(spacing: 2)
+                                ],
+                                spacing: 1
+                            ){
+                                ForEach(viewStore.state, id: \.style) { product in
+                                    ProductCell(product: product)
+                                        .onTapGesture {
+                                            store.send(.productTapped(product))
+                                        }
+                                }
+                            }
                         }
+                        .padding()
                     }
                 }
-                .padding()
-                
+                .background(Color(red: 0.97, green: 0.97, blue: 0.97))
             }
             .navigationTitle("Products")
         }.onAppear{
@@ -85,5 +100,5 @@ struct ProductListView: View {
     ]) , reducer: {
         ListProductsFeature()
     }))
-        //.modelContainer(for: Product.self, inMemory: true)
+    //.modelContainer(for: Product.self, inMemory: true)
 }
