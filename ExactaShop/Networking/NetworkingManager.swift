@@ -20,7 +20,6 @@ protocol NetworkProtocol{
 
 public class NetworkManager: NetworkProtocol {
     let apiURL = "http://www.mocky.io/v2/59b6a65a0f0000e90471257d"
-    static let shared = NetworkManager()
     
     init() {}
     

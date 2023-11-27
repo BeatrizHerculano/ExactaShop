@@ -10,6 +10,14 @@
 		D02D4D602B1288950057D355 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4D5F2B1288950057D355 /* NetworkingManager.swift */; };
 		D02D4D622B12889F0057D355 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4D612B12889F0057D355 /* FileLoader.swift */; };
 		D02D4D642B1289930057D355 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = D02D4D632B1289930057D355 /* mock.json */; };
+		D02D4D682B12E1C20057D355 /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4D672B12E1C20057D355 /* ShoppingCartView.swift */; };
+		D02D4D6A2B12E2010057D355 /* ShoppingCartFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4D692B12E2010057D355 /* ShoppingCartFeature.swift */; };
+		D02D4DA42B12E9480057D355 /* CartProdutct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DA32B12E9480057D355 /* CartProdutct.swift */; };
+		D02D4DA72B12F3340057D355 /* NetworkingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DA62B12F3340057D355 /* NetworkingDependencies.swift */; };
+		D02D4DA92B137AC40057D355 /* ShoppingCartDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DA82B137AC40057D355 /* ShoppingCartDatabase.swift */; };
+		D02D4DAB2B1390520057D355 /* DatabaseDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DAA2B1390520057D355 /* DatabaseDependencies.swift */; };
+		D02D4DAD2B14EEA50057D355 /* ProductDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DAC2B14EEA50057D355 /* ProductDatabase.swift */; };
+		D02D4DAF2B14F6B70057D355 /* DatabaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D4DAE2B14F6B70057D355 /* DatabaseContext.swift */; };
 		D05340F72B1153FE006036AF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05340F62B1153FE006036AF /* ProductCell.swift */; };
 		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
 		D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ProductListView.swift */; };
@@ -45,6 +53,14 @@
 		D02D4D612B12889F0057D355 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		D02D4D632B1289930057D355 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 		D02D4D652B128A5F0057D355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02D4D672B12E1C20057D355 /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
+		D02D4D692B12E2010057D355 /* ShoppingCartFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartFeature.swift; sourceTree = "<group>"; };
+		D02D4DA32B12E9480057D355 /* CartProdutct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProdutct.swift; sourceTree = "<group>"; };
+		D02D4DA62B12F3340057D355 /* NetworkingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDependencies.swift; sourceTree = "<group>"; };
+		D02D4DA82B137AC40057D355 /* ShoppingCartDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartDatabase.swift; sourceTree = "<group>"; };
+		D02D4DAA2B1390520057D355 /* DatabaseDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDependencies.swift; sourceTree = "<group>"; };
+		D02D4DAC2B14EEA50057D355 /* ProductDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDatabase.swift; sourceTree = "<group>"; };
+		D02D4DAE2B14F6B70057D355 /* DatabaseContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseContext.swift; sourceTree = "<group>"; };
 		D05340F62B1153FE006036AF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
@@ -95,6 +111,26 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		D02D4D662B12DDB70057D355 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				D02D4DA82B137AC40057D355 /* ShoppingCartDatabase.swift */,
+				D02D4D672B12E1C20057D355 /* ShoppingCartView.swift */,
+				D02D4D692B12E2010057D355 /* ShoppingCartFeature.swift */,
+				D02D4DA32B12E9480057D355 /* CartProdutct.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		D02D4DA52B12F3220057D355 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D02D4DA62B12F3340057D355 /* NetworkingDependencies.swift */,
+				D02D4DAA2B1390520057D355 /* DatabaseDependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		D0F9B0BF2B112A500024DB61 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +154,8 @@
 		D0F9B0CA2B112A500024DB61 /* ExactaShop */ = {
 			isa = PBXGroup;
 			children = (
+				D02D4DA52B12F3220057D355 /* Dependencies */,
+				D02D4D662B12DDB70057D355 /* ShoppingCart */,
 				D02D4D652B128A5F0057D355 /* Info.plist */,
 				D02D4D632B1289930057D355 /* mock.json */,
 				D02D4D5E2B1288850057D355 /* Networking */,
@@ -126,6 +164,7 @@
 				D0F9B0CF2B112A500024DB61 /* Product.swift */,
 				D0F9B0D12B112A520024DB61 /* Assets.xcassets */,
 				D0F9B0D32B112A520024DB61 /* Preview Content */,
+				D02D4DAE2B14F6B70057D355 /* DatabaseContext.swift */,
 			);
 			path = ExactaShop;
 			sourceTree = "<group>";
@@ -161,6 +200,7 @@
 				D0F9B0CD2B112A500024DB61 /* ProductListView.swift */,
 				D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */,
 				D05340F62B1153FE006036AF /* ProductCell.swift */,
+				D02D4DAC2B14EEA50057D355 /* ProductDatabase.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -302,12 +342,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02D4DAF2B14F6B70057D355 /* DatabaseContext.swift in Sources */,
+				D02D4DAD2B14EEA50057D355 /* ProductDatabase.swift in Sources */,
 				D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */,
 				D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */,
+				D02D4DAB2B1390520057D355 /* DatabaseDependencies.swift in Sources */,
 				D02D4D622B12889F0057D355 /* FileLoader.swift in Sources */,
 				D05340F72B1153FE006036AF /* ProductCell.swift in Sources */,
+				D02D4DA92B137AC40057D355 /* ShoppingCartDatabase.swift in Sources */,
+				D02D4D6A2B12E2010057D355 /* ShoppingCartFeature.swift in Sources */,
+				D02D4DA72B12F3340057D355 /* NetworkingDependencies.swift in Sources */,
 				D02D4D602B1288950057D355 /* NetworkingManager.swift in Sources */,
 				D0F9B0D02B112A500024DB61 /* Product.swift in Sources */,
+				D02D4D682B12E1C20057D355 /* ShoppingCartView.swift in Sources */,
+				D02D4DA42B12E9480057D355 /* CartProdutct.swift in Sources */,
 				D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

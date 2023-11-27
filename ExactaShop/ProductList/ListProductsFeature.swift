@@ -12,6 +12,8 @@ import ComposableArchitecture
 @Reducer
 struct ListProductsFeature {
     @Dependency(\.networking) var networking
+    @Dependency(\.cartDatabase) var database
+    @Dependency(\.productDatabase) var productsDatabase
     
     struct State {
         var products: [Product]
@@ -52,5 +54,8 @@ struct ListProductsFeature {
     }
     
     func addProductToCart(_ product: Product){
+        database.add(cartProduct: .init(product: product))
+        
+//        database.add(cartProduct: .init())
     }
 }

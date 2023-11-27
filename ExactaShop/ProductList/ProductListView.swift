@@ -41,6 +41,18 @@ struct ProductListView: View {
                 .background(Color(red: 0.97, green: 0.97, blue: 0.97))
             }
             .navigationTitle("Products")
+            .toolbar(content: {
+                NavigationLink  {
+                    ShoppingCartView(store: Store(initialState: {
+                        ShoppingCartFeature.State.init(products: [])
+                    }(), reducer: {
+                        ShoppingCartFeature()
+                    }))
+                } label: {
+                    Text("carrinho")
+                }
+
+            })
         }.onAppear{
             store.send(.viewLoaded)
         }
@@ -100,5 +112,4 @@ struct ProductListView: View {
     ]) , reducer: {
         ListProductsFeature()
     }))
-    //.modelContainer(for: Product.self, inMemory: true)
 }

@@ -8,14 +8,28 @@
 import Foundation
 import SwiftData
 
-struct Products: Codable {
+struct Products: Decodable {
     var products: [Product]
 }
-struct Product: Equatable, Codable {
-    static func == (lhs: Product, rhs: Product) -> Bool {
-        lhs.style == rhs.style
-    }
-    enum CodingKeys: String, CodingKey {
+
+@Model
+class Product: Equatable, Decodable {
+    
+    var name: String
+    var style: String
+    var codeColor: String
+    var colorSlug: String
+    var color: String
+    var onSale: Bool
+    var regularPrice: String
+    var actualPrice: String
+    var discountpercentage: String
+    var installments: String
+    var image: String
+    var sizes: [Size]
+
+    
+    enum ProductCodingKeys: String, CodingKey {
         case name
         case style
         case codeColor = "code_color"
@@ -30,20 +44,12 @@ struct Product: Equatable, Codable {
         case sizes
     }
     
-    var name: String
-    var style: String
-    var codeColor: String
-    var colorSlug: String
-    var color: String
-    var onSale: Bool
-    var regularPrice: String
-    var actualPrice: String
-    var discountpercentage: String
-    var installments: String
-    var image: String
-    var sizes: [Size]
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        lhs.style == rhs.style
+    }
     
-    init(name: String, style: String, codeColor: String, colorSlug: String, color: String, onSale: Bool, regularPrice: String, actualPrice: String, discountpercentage: String, installments: String, image: String, sizes: [Size]) {
+    
+    init(name: String, style: String, codeColor: String, colorSlug: String, color: String, onSale: Bool, regularPrice: String, actualPrice: String, discountpercentage: String, installments: String, image: String, sizes: [Size], cartProduct: CartProduct? = nil) {
         self.name = name
         self.style = style
         self.codeColor = codeColor
@@ -58,14 +64,61 @@ struct Product: Equatable, Codable {
         self.sizes = sizes
     }
     
+    required init(from decoder: Decoder) throws {
+        
+        do {
+            let container = try decoder.container(keyedBy: ProductCodingKeys.self)
+            self.name = try container.decode(String.self, forKey: .name)
+            self.style = try container.decode(String.self, forKey: .style)
+            self.codeColor = try container.decode(String.self, forKey: .codeColor)
+            self.colorSlug = try container.decode(String.self, forKey: .colorSlug)
+            self.color = try container.decode(String.self, forKey: .color)
+            self.onSale = try container.decode(Bool.self, forKey: .onSale)
+            self.regularPrice = try container.decode(String.self, forKey: .regularPrice)
+            self.actualPrice = try container.decode(String.self, forKey: .actualPrice)
+            self.discountpercentage = try container.decode(String.self, forKey: .discountpercentage)
+            self.installments = try container.decode(String.self, forKey: .installments)
+            self.image = try container.decode(String.self, forKey: .image)
+            self.sizes = try container.decode([Size].self, forKey: .sizes)
+        } catch {
+            throw error
+        }
+        
+    }
+    
     func imageURL() -> URL?{
         guard let url = URL(string: image) else { return nil }
         return url
     }
     
-    struct Size: Codable {
-        var available: Bool
-        var size: String
-        var sku: String
+}
+
+@Model
+class Size: Decodable {
+    var available: Bool
+    var size: String
+    var sku: String
+    
+    init(available: Bool, size: String, sku: String) {
+        self.available = available
+        self.size = size
+        self.sku = sku
+    }
+    
+    enum SizeCodingKeys: CodingKey{
+        case available
+        case size
+        case sku
+    }
+    
+    required init(from decoder: Decoder) throws {
+        do {
+            let container = try decoder.container(keyedBy: SizeCodingKeys.self)
+            self.available = try container.decode(Bool.self, forKey: .available)
+            self.size = try container.decode(String.self, forKey: .size)
+            self.sku = try container.decode(String.self, forKey: .sku)
+        } catch {
+            throw error
+        }
     }
 }

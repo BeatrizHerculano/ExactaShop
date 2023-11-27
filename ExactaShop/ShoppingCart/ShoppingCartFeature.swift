@@ -10,12 +10,14 @@ import ComposableArchitecture
 
 @Reducer
 struct ShoppingCartFeature {
+    @Dependency(\.cartDatabase) var database
+    
     struct State {
-        var products: [Product]
+        var products: [CartProduct]
     }
     enum Action {
         case viewLoaded
-        case setProducts([Product])
+        case setProducts([CartProduct])
     }
     
     var body: some ReducerOf<Self> {
@@ -23,7 +25,7 @@ struct ShoppingCartFeature {
             switch action {
             case .viewLoaded:
                 return .run { send in
-                    
+                    await fetchShoppingCartProducts(send)
                 }
             case .setProducts(let products):
                 state.products = products
@@ -33,6 +35,8 @@ struct ShoppingCartFeature {
     }
     
     func fetchShoppingCartProducts(_ send: Send<Action>) async {
-        
+//        database.removeAllData()
+        let products = database.fetchAll()
+        await send(.setProducts(products))
     }
 }
