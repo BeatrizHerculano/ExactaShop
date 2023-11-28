@@ -24,8 +24,8 @@ struct ShoppingCartView: View {
                         LazyVGrid(columns: [GridItem(spacing: 2), GridItem(spacing: 2)], spacing: 1) {
                             
                             ForEach(viewStore.state, id: \.id) { product in
-                                Text("produto")
-//                                ProductCell(product: product.product)
+//                                Text("produto")
+                                ProductCell(product: product.product)
                                 
                             }
                         }

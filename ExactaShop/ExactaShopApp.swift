@@ -11,6 +11,15 @@ import ComposableArchitecture
 
 @main
 struct ExactaShopApp: App {
+    @Dependency(\.databaseContext.context) var databaseContext
+
+    func context() -> ModelContext{
+        do{
+            return try databaseContext()
+        } catch {
+            fatalError()
+        }
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -20,8 +29,7 @@ struct ExactaShopApp: App {
                 ListProductsFeature()
             }))
         }
-        .modelContainer(
-            for: [Product.self, Size.self, CartProduct.self]
-        )
+        .modelContext(context())
+        
     }
 }

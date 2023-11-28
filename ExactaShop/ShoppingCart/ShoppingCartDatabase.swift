@@ -11,10 +11,8 @@ import Dependencies
 class ShoppingCartDatabase{
     let type = CartProduct.self
     @Dependency(\.databaseContext.context) var context
-    init() {
-         
-    }
     
+
     func add(cartProduct: CartProduct){
         try? context().insert(cartProduct)
     }

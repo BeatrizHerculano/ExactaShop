@@ -12,7 +12,7 @@ import Dependencies
 struct DatabaseContext {
     static var appContext: ModelContext = {
         do {
-            print("criando container")
+            
             let container = try ModelContainer(for: Product.self, Size.self, CartProduct.self)
             return ModelContext(container)
         } catch {
