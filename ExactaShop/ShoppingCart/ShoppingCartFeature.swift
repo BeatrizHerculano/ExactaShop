@@ -68,7 +68,6 @@ struct ShoppingCartFeature {
             let decimalQuantity = Decimal(current.quantity)
             
             return acc + (decimalValue *  decimalQuantity)
-            
         }
         
         if let formattedString = formatter.string(from: NSDecimalNumber(decimal: total)) {

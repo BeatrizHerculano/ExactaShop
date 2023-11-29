@@ -85,35 +85,10 @@ struct ProductDetailsView: View {
                             .clipShape(Circle())
                             .frame(height: 40)
                     }
-                    
-                    
-//                    Text("Available Sizes:")
-//                        .font(.headline)
-//                        .fontWeight(.bold)
-                    
-//                    ScrollView(.horizontal, showsIndicators: false) {
-//                        HStack(spacing: 16) {
-//                            ForEach(viewStore.sizes, id: \.sku) { size in
-//                                
-//                                Button {
-//                                    print(size.size)
-//                                } label: {
-//                                    Text(size.size)
-//                                        .foregroundStyle(size.available ? .green : .gray)
-//                                        .padding(8)
-//                                        .background(RoundedRectangle(cornerRadius: 8).stroke())
-//                                }
-//                                .disabled(!size.available)
-//                                
-//                                
-//                            }
-//                        }
-//                        
-//                    }
                 }
                 .padding()
             }
-            .navigationTitle("Product Details")
+            .navigationTitle(viewStore.name)
         }
     }
     

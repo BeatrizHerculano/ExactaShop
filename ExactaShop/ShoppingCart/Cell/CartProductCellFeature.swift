@@ -41,27 +41,25 @@ struct CartProductCellFeature {
         
         Reduce{ state, action in
             switch action{
+                
             case .increaseButtonTapped(let product):
                 return .run { send in
                     await increaseQuantity(product,send)
                 }
+    
             case .decreaseButtonTapped(let product):
-                if product.quantity > 1{
+                if product.quantity > 1 {
                     return .run { send in
                         await decreaseQuantity(product,send)
                     }
                 }
                 return .none
+                
             case .changeQuantity(let quantity):
                 state.cartProduct.quantity = quantity
                 return .none
-            
             }
         }
-    }
-    
-    func removeProduct(){
-        
     }
     
     func increaseQuantity(_ product: CartProduct,_ send: Send<Action>) async {

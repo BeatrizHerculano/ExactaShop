@@ -21,14 +21,8 @@ struct CartProductCell: View {
                     Button {
                         viewStore.send(.decreaseButtonTapped(viewStore.state))
                     } label: {
-                        Label {
-                            
-                        } icon: {
-                            Image(systemName: "minus.circle.fill")
-                        }
-                        
+                        Image(systemName: "minus.circle.fill")
                     }
-                    .labelStyle(.iconOnly)
                     
                     Text("\(viewStore.quantity)")
                     
@@ -39,13 +33,10 @@ struct CartProductCell: View {
                     }
                     .labelStyle(.iconOnly)
                 }
-               
+                
             }
             .clipShape(.rect(cornerRadius: 10))
             .background(.white)
-            
-            
-            
         }
     }
 }

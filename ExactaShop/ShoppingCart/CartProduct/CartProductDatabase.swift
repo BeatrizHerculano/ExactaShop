@@ -8,16 +8,16 @@
 import Foundation
 import SwiftData
 import Dependencies
-class ShoppingCartDatabase{
-    let type = CartProduct.self
-    @Dependency(\.databaseContext.context) var context
+class CartProductDatabase {
     
+    @Dependency(\.databaseContext.context) var context
+    let type = CartProduct.self
 
-    func add(cartProduct: CartProduct){
+    func add(cartProduct: CartProduct) {
         try? context().insert(cartProduct)
     }
     
-    func remove(style: String){
+    func remove(style: String) {
         try? context().delete(
             model: CartProduct.self,
             where:  #Predicate<CartProduct>{ product in
@@ -26,11 +26,11 @@ class ShoppingCartDatabase{
         )
     }
     
-    func removeAllData(){
+    func removeAllData() {
         try? context().delete(model: CartProduct.self)
     }
     
-    func count() -> Int{
+    func count() -> Int {
         guard let count = try? context().fetchCount(.init(
             predicate: #Predicate<CartProduct>{ cartProduct in return true}
         )) else { return 0 }
@@ -38,7 +38,7 @@ class ShoppingCartDatabase{
         return count
     }
     
-    func fetch(style: String) -> CartProduct?{
+    func fetch(style: String) -> CartProduct? {
         guard let object = try? context().fetch(.init(
             predicate: #Predicate<CartProduct>{ product in product.product.style == style}
         )) else { return nil }
@@ -46,7 +46,7 @@ class ShoppingCartDatabase{
         return object.first
     }
     
-    func fetchAll() -> [CartProduct]{
+    func fetchAll() -> [CartProduct] {
         guard let objects = try? context().fetch(.init(
             predicate: #Predicate<CartProduct>{ product in true }
         )) else { return [] }

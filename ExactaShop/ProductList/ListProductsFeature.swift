@@ -46,7 +46,6 @@ struct ListProductsFeature {
         let result = await networking.getRequest(responseType: Products.self)
         switch result{
         case .success(let products):
-//            print(products.products[0].sizes[0])
             await send(.setProducts(products.products))
         case .failure(let error):
             print(error)
@@ -55,7 +54,7 @@ struct ListProductsFeature {
     
     func addProductToCart(_ product: Product){
         let existingCartProduct = database.fetch(style: product.style)
-        if( existingCartProduct == nil){
+        if(existingCartProduct == nil){
             database.add(cartProduct: .init(product: product))
         }
     }

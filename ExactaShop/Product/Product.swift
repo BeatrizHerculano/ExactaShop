@@ -16,7 +16,7 @@ struct Products: Decodable {
 class Product: Equatable, Decodable {
     
     var name: String
-    @Attribute(.unique) var style: String
+    var style: String
     var codeColor: String
     var colorSlug: String
     var color: String

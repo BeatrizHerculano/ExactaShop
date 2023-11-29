@@ -23,7 +23,7 @@ struct ShoppingCartView: View {
                             LazyVGrid(columns: [GridItem(spacing: 2), GridItem(spacing: 2)], spacing: 1) {
                                 ForEach(viewStore.state.products, id: \.id) { product in
                                     
-                                    ZStack(alignment: .topTrailing){
+                                    ZStack(alignment: .topTrailing) {
                                         CartProductCell(store: Store(initialState: CartProductCellFeature.State(cartProduct: product), reducer: {
                                             CartProductCellFeature()
                                         }))
@@ -36,12 +36,9 @@ struct ShoppingCartView: View {
                                                 .clipShape(Circle())
                                         }
                                     }
-                                    
-                                    
                                 }
                             }
                         }
-                        
                         
                         Spacer()
                         
@@ -56,15 +53,15 @@ struct ShoppingCartView: View {
                         .frame(width: geometry.size.width, alignment: .bottomLeading)
                         .padding()
                         .background(Color.red)
-                                
-                        Spacer()
                         
+                        Spacer()
                     }
                     .frame(height: geometry.size.height)
                     .background(Color(red: 0.97, green: 0.97, blue: 0.97))
                 }
             }
-            .navigationTitle("Products")
+            .navigationTitle("Carrinho")
+            
         }.onAppear{
             store.send(.viewLoaded)
         }
