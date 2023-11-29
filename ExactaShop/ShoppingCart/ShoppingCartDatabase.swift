@@ -53,4 +53,13 @@ class ShoppingCartDatabase{
         
         return objects
     }
+    
+    func update(cartProduct: CartProduct) {
+        do{
+            try context().save()
+        } catch {
+            print(error)
+        }
+        
+    }
 }

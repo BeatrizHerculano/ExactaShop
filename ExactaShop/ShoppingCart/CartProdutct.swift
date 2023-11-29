@@ -16,8 +16,10 @@ class CartProduct{
     @Attribute(.unique) var uuidKey: UUID = UUID()
     
     var product: Product
+    var quantity: Int
     
-    init(product: Product) {
+    init(product: Product, quantity: Int = 1) {
         self.product = product
+        self.quantity = quantity
     }
 }

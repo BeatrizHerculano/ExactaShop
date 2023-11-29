@@ -12,12 +12,14 @@ import ComposableArchitecture
 struct ShoppingCartFeature {
     @Dependency(\.cartDatabase) var database
     
-    struct State {
+    struct State: Equatable {
         var products: [CartProduct]
+        var totalPrice: String = "R$ 0,00"
     }
     enum Action {
         case viewLoaded
         case setProducts([CartProduct])
+        case removeProductButtonTapped(CartProduct)
     }
     
     var body: some ReducerOf<Self> {
@@ -27,16 +29,27 @@ struct ShoppingCartFeature {
                 return .run { send in
                     await fetchShoppingCartProducts(send)
                 }
+            
             case .setProducts(let products):
                 state.products = products
                 return .none
+            
+            case .removeProductButtonTapped(let product):
+                return .run { send in
+                    await removeProduct(product, send)
+                }
             }
+            
         }
     }
     
     func fetchShoppingCartProducts(_ send: Send<Action>) async {
-//        database.removeAllData()
         let products = database.fetchAll()
         await send(.setProducts(products))
+    }
+    
+    func removeProduct(_ product: CartProduct,_ send: Send<Action>) async {
+        database.remove(style: product.product.style)
+        await send(.viewLoaded)
     }
 }
