@@ -44,10 +44,14 @@ struct ShoppingCartView: View {
                         
                         
                         Spacer()
+                        
                         HStack {
                             Text("Valor total")
                                 .foregroundColor(.white)
+                                .bold()
                             Text(viewStore.state.totalPrice)
+                                .foregroundColor(.white)
+                                .bold()
                         }
                         .frame(width: geometry.size.width, alignment: .bottomLeading)
                         .padding()

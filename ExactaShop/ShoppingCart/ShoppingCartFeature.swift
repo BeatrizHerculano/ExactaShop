@@ -15,10 +15,11 @@ struct ShoppingCartFeature {
     struct State: Equatable {
         var products: [CartProduct]
         var totalPrice: String = "R$ 0,00"
+        
     }
     enum Action {
         case viewLoaded
-        case setProducts([CartProduct])
+        case productsFetched([CartProduct])
         case removeProductButtonTapped(CartProduct)
     }
     
@@ -30,7 +31,8 @@ struct ShoppingCartFeature {
                     await fetchShoppingCartProducts(send)
                 }
             
-            case .setProducts(let products):
+            case .productsFetched (let products):
+                state.totalPrice = calculateTotalPrice(products: products)
                 state.products = products
                 return .none
             
@@ -45,11 +47,34 @@ struct ShoppingCartFeature {
     
     func fetchShoppingCartProducts(_ send: Send<Action>) async {
         let products = database.fetchAll()
-        await send(.setProducts(products))
+        await send(.productsFetched(products))
     }
     
     func removeProduct(_ product: CartProduct,_ send: Send<Action>) async {
         database.remove(style: product.product.style)
         await send(.viewLoaded)
+    }
+    
+    func calculateTotalPrice(products: [CartProduct]) -> String{
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "pt_BR")
+        
+        let total = products.reduce(Decimal(0)) { acc, current in
+            let treatedRegularPrice = current.product.regularPrice.replacingOccurrences(of: " ", with: "")
+            let number = formatter.number(from: treatedRegularPrice)
+            let decimalValue = number?.decimalValue ?? 0
+            let decimalQuantity = Decimal(current.quantity)
+            
+            return acc + (decimalValue *  decimalQuantity)
+            
+        }
+        
+        if let formattedString = formatter.string(from: NSDecimalNumber(decimal: total)) {
+               return formattedString
+        } else {
+               return "Invalid Currency Value"
+        }
     }
 }

@@ -10,7 +10,7 @@ import SwiftData
 import ComposableArchitecture
 
 struct CartProductCell: View {
-
+    
     let store: StoreOf<CartProductCellFeature>
     
     var body: some View {
@@ -19,30 +19,32 @@ struct CartProductCell: View {
                 ProductCell(product: viewStore.product)
                 HStack {
                     Button {
-                        print("minus")
                         viewStore.send(.decreaseButtonTapped(viewStore.state))
                     } label: {
                         Label {
                             
                         } icon: {
-                            Image(systemName: "minus")
+                            Image(systemName: "minus.circle.fill")
                         }
                         
                     }
                     .labelStyle(.iconOnly)
+                    
+                    Text("\(viewStore.quantity)")
+                    
+                    Button {
+                        viewStore.send(.increaseButtonTapped(viewStore.state))
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .labelStyle(.iconOnly)
                 }
-                .buttonBorderShape(.circle)
-                
-                Text("\(viewStore.quantity)")
-                
-                Button {
-                    viewStore.send(.increaseButtonTapped(viewStore.state))
-                } label: {
-                    Image(systemName: "plus")
-                }
-                .labelStyle(.iconOnly)
+               
             }
-            .buttonBorderShape(.circle)
+            .clipShape(.rect(cornerRadius: 10))
+            .background(.white)
+            
+            
             
         }
     }

@@ -46,9 +46,12 @@ struct CartProductCellFeature {
                     await increaseQuantity(product,send)
                 }
             case .decreaseButtonTapped(let product):
-                return .run { send in
-                    await decreaseQuantity(product,send)
+                if product.quantity > 1{
+                    return .run { send in
+                        await decreaseQuantity(product,send)
+                    }
                 }
+                return .none
             case .changeQuantity(let quantity):
                 state.cartProduct.quantity = quantity
                 return .none
