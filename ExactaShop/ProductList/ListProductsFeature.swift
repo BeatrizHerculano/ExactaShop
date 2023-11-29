@@ -53,7 +53,7 @@ struct ListProductsFeature {
     }
     
     func addProductToCart(_ product: Product){
-        var existingCartProduct = database.fetch(style: product.style)
+        let existingCartProduct = database.fetch(style: product.style)
         if( existingCartProduct == nil){
             database.add(cartProduct: .init(product: product))
         }
