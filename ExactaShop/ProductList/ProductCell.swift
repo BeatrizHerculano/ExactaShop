@@ -15,29 +15,35 @@ struct ProductCell: View {
     var body: some View {
         
         VStack{
-            AsyncImage(url: product.imageURL()) { image in
-                image.resizable()
-                    .scaledToFit()
-                    .clipped()
-            } placeholder: {
-                ProgressView()
+            AsyncImage(url: URL(string: product.image)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .clipped()
+                case .failure:
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .clipped()
+                        .foregroundColor(.gray)
+                @unknown default:
+                    fatalError()
+                }
             }
-            
             Text(product.name)
                 .padding(.top, 8)
             
             Text(product.regularPrice)
                 .padding(.top, 8)
                 .padding(.bottom, 30)
-
+            
         }
         .background(Color.white)
         .clipShape(.rect(cornerRadius: 10))
-        
-        
-        
-        
-        
     }
 }
 

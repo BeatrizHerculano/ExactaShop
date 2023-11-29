@@ -21,6 +21,8 @@
 		D0375C982B165EB10085E0CD /* CartProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0375C972B165EB10085E0CD /* CartProductCell.swift */; };
 		D05340F72B1153FE006036AF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05340F62B1153FE006036AF /* ProductCell.swift */; };
 		D092ACE62B168D0F002FF824 /* CartProductCellFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092ACE52B168D0F002FF824 /* CartProductCellFeature.swift */; };
+		D0AC6F772B17A02200B68A0D /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6F762B17A02200B68A0D /* ProductDetailsView.swift */; };
+		D0AC6F7A2B17A07D00B68A0D /* ProductDetailsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6F792B17A07D00B68A0D /* ProductDetailsFeature.swift */; };
 		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
 		D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ProductListView.swift */; };
 		D0F9B0D02B112A500024DB61 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Product.swift */; };
@@ -66,6 +68,8 @@
 		D0375C972B165EB10085E0CD /* CartProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCell.swift; sourceTree = "<group>"; };
 		D05340F62B1153FE006036AF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D092ACE52B168D0F002FF824 /* CartProductCellFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellFeature.swift; sourceTree = "<group>"; };
+		D0AC6F762B17A02200B68A0D /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		D0AC6F792B17A07D00B68A0D /* ProductDetailsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsFeature.swift; sourceTree = "<group>"; };
 		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
 		D0F9B0CD2B112A500024DB61 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D0AC6F752B17966600B68A0D /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D0AC6F762B17A02200B68A0D /* ProductDetailsView.swift */,
+				D0AC6F792B17A07D00B68A0D /* ProductDetailsFeature.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
 		D0F9B0BF2B112A500024DB61 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 		D0F9B0CA2B112A500024DB61 /* ExactaShop */ = {
 			isa = PBXGroup;
 			children = (
+				D0AC6F752B17966600B68A0D /* ProductDetails */,
 				D02D4DA52B12F3220057D355 /* Dependencies */,
 				D02D4D662B12DDB70057D355 /* ShoppingCart */,
 				D02D4D652B128A5F0057D355 /* Info.plist */,
@@ -367,12 +381,14 @@
 				D02D4DA92B137AC40057D355 /* ShoppingCartDatabase.swift in Sources */,
 				D02D4D6A2B12E2010057D355 /* ShoppingCartFeature.swift in Sources */,
 				D02D4DA72B12F3340057D355 /* NetworkingDependencies.swift in Sources */,
+				D0AC6F7A2B17A07D00B68A0D /* ProductDetailsFeature.swift in Sources */,
 				D092ACE62B168D0F002FF824 /* CartProductCellFeature.swift in Sources */,
 				D02D4D602B1288950057D355 /* NetworkingManager.swift in Sources */,
 				D0F9B0D02B112A500024DB61 /* Product.swift in Sources */,
 				D02D4D682B12E1C20057D355 /* ShoppingCartView.swift in Sources */,
 				D02D4DA42B12E9480057D355 /* CartProdutct.swift in Sources */,
 				D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */,
+				D0AC6F772B17A02200B68A0D /* ProductDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

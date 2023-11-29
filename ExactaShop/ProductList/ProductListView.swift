@@ -28,10 +28,38 @@ struct ProductListView: View {
                                 spacing: 1
                             ){
                                 ForEach(viewStore.state, id: \.style) { product in
-                                    ProductCell(product: product)
-                                        .onTapGesture {
-                                            store.send(.productTapped(product))
+                                    ZStack(alignment: .bottomTrailing) {
+                                        ZStack(alignment: .topTrailing){
+                                            NavigationLink {
+                                                
+                                                ProductDetailsView(
+                                                    store: Store(
+                                                        initialState: ProductDetailsFeature.State(product: product),
+                                                        reducer: {
+                                                            ProductDetailsFeature()
+                                                        }))
+                                            } label: {
+                                                ProductCell(product: product)
+                                            }
+
+                                            if(product.onSale) {
+                                                Image(systemName: "tag.fill")
+                                                    .foregroundStyle(.green)
+                                            }
                                         }
+                                        
+                                        Button {
+                                            store.send(.productTapped(product))
+                                        } label: {
+                                            Image(systemName: "plus.circle.fill")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .foregroundColor(.blue)
+                                                .clipShape(Circle())
+                                                .frame(height: 40)
+                                        }
+
+                                    }
                                 }
                             }
                         }
@@ -51,11 +79,29 @@ struct ProductListView: View {
                 } label: {
                     Text("carrinho")
                 }
-
+                
             })
         }.onAppear{
             store.send(.viewLoaded)
         }
+    }
+    
+    func buildProduct(_ product: Product) -> Product{
+        let testProduct: Product = .init(
+            name: product.name,
+            style: product.style,
+            codeColor: product.codeColor,
+            colorSlug: product.colorSlug,
+            color: product.color,
+            onSale: product.onSale,
+            regularPrice: product.regularPrice,
+            actualPrice: product.actualPrice,
+            discountpercentage: product.discountpercentage,
+            installments: product.installments,
+            image: product.image,
+            sizes: [])
+
+        return testProduct
     }
 }
 

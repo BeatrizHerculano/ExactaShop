@@ -46,6 +46,7 @@ struct ListProductsFeature {
         let result = await networking.getRequest(responseType: Products.self)
         switch result{
         case .success(let products):
+//            print(products.products[0].sizes[0])
             await send(.setProducts(products.products))
         case .failure(let error):
             print(error)

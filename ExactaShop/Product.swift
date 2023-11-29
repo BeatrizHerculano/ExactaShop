@@ -16,7 +16,7 @@ struct Products: Decodable {
 class Product: Equatable, Decodable {
     
     var name: String
-    var style: String
+    @Attribute(.unique) var style: String
     var codeColor: String
     var colorSlug: String
     var color: String
@@ -26,7 +26,7 @@ class Product: Equatable, Decodable {
     var discountpercentage: String
     var installments: String
     var image: String
-    var sizes: [Size]
+    @Relationship(deleteRule: .nullify, inverse: \Size.product) var sizes: [Size]
 
     
     enum ProductCodingKeys: String, CodingKey {
@@ -79,7 +79,8 @@ class Product: Equatable, Decodable {
             self.discountpercentage = try container.decode(String.self, forKey: .discountpercentage)
             self.installments = try container.decode(String.self, forKey: .installments)
             self.image = try container.decode(String.self, forKey: .image)
-            self.sizes = try container.decode([Size].self, forKey: .sizes)
+//            self.sizes = try container.decode([Size].self, forKey: .sizes)
+            self.sizes = []
         } catch {
             throw error
         }
@@ -97,7 +98,8 @@ class Product: Equatable, Decodable {
 class Size: Decodable {
     var available: Bool
     var size: String
-    var sku: String
+    @Attribute(.unique) var sku: String
+    var product: Product?
     
     init(available: Bool, size: String, sku: String) {
         self.available = available
