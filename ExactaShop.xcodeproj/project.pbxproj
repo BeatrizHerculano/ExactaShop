@@ -23,6 +23,9 @@
 		D092ACE62B168D0F002FF824 /* CartProductCellFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092ACE52B168D0F002FF824 /* CartProductCellFeature.swift */; };
 		D0AC6F772B17A02200B68A0D /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6F762B17A02200B68A0D /* ProductDetailsView.swift */; };
 		D0AC6F7A2B17A07D00B68A0D /* ProductDetailsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6F792B17A07D00B68A0D /* ProductDetailsFeature.swift */; };
+		D0F4A3042B1909DD008C54A6 /* ProductCellFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4A3032B1909DD008C54A6 /* ProductCellFeatureTests.swift */; };
+		D0F4A3072B19106E008C54A6 /* CartDatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4A3062B19106E008C54A6 /* CartDatabaseMock.swift */; };
+		D0F4A30A2B19109E008C54A6 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4A3092B19109E008C54A6 /* NetworkMock.swift */; };
 		D0F9B0CC2B112A500024DB61 /* ExactaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */; };
 		D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CD2B112A500024DB61 /* ProductListView.swift */; };
 		D0F9B0D02B112A500024DB61 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0CF2B112A500024DB61 /* Product.swift */; };
@@ -70,6 +73,9 @@
 		D092ACE52B168D0F002FF824 /* CartProductCellFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellFeature.swift; sourceTree = "<group>"; };
 		D0AC6F762B17A02200B68A0D /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		D0AC6F792B17A07D00B68A0D /* ProductDetailsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsFeature.swift; sourceTree = "<group>"; };
+		D0F4A3032B1909DD008C54A6 /* ProductCellFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellFeatureTests.swift; sourceTree = "<group>"; };
+		D0F4A3062B19106E008C54A6 /* CartDatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDatabaseMock.swift; sourceTree = "<group>"; };
+		D0F4A3092B19109E008C54A6 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
 		D0F9B0C82B112A500024DB61 /* ExactaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExactaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0CB2B112A500024DB61 /* ExactaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopApp.swift; sourceTree = "<group>"; };
 		D0F9B0CD2B112A500024DB61 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
@@ -185,6 +191,15 @@
 			path = CartProduct;
 			sourceTree = "<group>";
 		};
+		D0F4A3052B19105E008C54A6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F4A3062B19106E008C54A6 /* CartDatabaseMock.swift */,
+				D0F4A3092B19109E008C54A6 /* NetworkMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D0F9B0BF2B112A500024DB61 = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +249,9 @@
 		D0F9B0DD2B112A520024DB61 /* ExactaShopTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0F4A3052B19105E008C54A6 /* Mocks */,
 				D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */,
+				D0F4A3032B1909DD008C54A6 /* ProductCellFeatureTests.swift */,
 			);
 			path = ExactaShopTests;
 			sourceTree = "<group>";
@@ -420,6 +437,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F4A30A2B19109E008C54A6 /* NetworkMock.swift in Sources */,
+				D0F4A3042B1909DD008C54A6 /* ProductCellFeatureTests.swift in Sources */,
+				D0F4A3072B19106E008C54A6 /* CartDatabaseMock.swift in Sources */,
 				D0F9B0DF2B112A520024DB61 /* ExactaShopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
