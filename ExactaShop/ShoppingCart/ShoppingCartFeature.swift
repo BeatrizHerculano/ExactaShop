@@ -11,17 +11,19 @@ import ComposableArchitecture
 @Reducer
 struct ShoppingCartFeature {
     @Dependency(\.cartDatabase) var database
+    @Dependency(\.uuid) var uuid
     
     struct State: Equatable {
-        var products: [CartProduct]
         var totalPrice: String = "R$ 0,00"
-        
+        var cartItems: IdentifiedArrayOf<CartProductCellFeature.State> = []
     }
     enum Action {
         case viewLoaded
         case productsFetched([CartProduct])
-        case removeProductButtonTapped(CartProduct)
+        case removeProductButtonTapped(UUID)
+        case cartItem(id: CartProductCellFeature.State.ID, action: CartProductCellFeature.Action)
     }
+    
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -33,15 +35,41 @@ struct ShoppingCartFeature {
             
             case .productsFetched (let products):
                 state.totalPrice = calculateTotalPrice(products: products)
-                state.products = products
+                state.cartItems = IdentifiedArrayOf(
+                    uniqueElements: products.map {
+                        CartProductCellFeature.State(
+                            id: uuid(),
+                            cartProduct: $0
+                        )
+                    }
+                )
                 return .none
             
-            case .removeProductButtonTapped(let product):
+            case .removeProductButtonTapped(let id):
+                
+                guard let index = state.cartItems.index(id: id) else { return .none}
+                let item = state.cartItems[index].cartProduct
+                
                 return .run { send in
-                    await removeProduct(product, send)
+                    await removeProduct(item, send)
+                }
+                
+            case .cartItem(id: _, action: let action):
+                switch action {
+                case .delegate(.quantityChanged):
+                    return .send(.viewLoaded)
+                case .delegate(.itemRemoved(let id)):
+                    return .send(.removeProductButtonTapped(id))
+                default:
+                    return .none
                 }
             }
             
+        }.forEach(
+            \.cartItems,
+             action: /ShoppingCartFeature.Action.cartItem(id:action:)
+        ) {
+            CartProductCellFeature()
         }
     }
     

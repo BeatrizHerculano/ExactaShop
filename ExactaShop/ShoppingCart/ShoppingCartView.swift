@@ -18,27 +18,22 @@ struct ShoppingCartView: View {
         NavigationStack {
             WithViewStore(self.store, observe: { $0 }) { viewStore in
                 GeometryReader { geometry in
-                    VStack {
+                    VStack(alignment:.leading) {
                         ScrollView {
-                            LazyVGrid(columns: [GridItem(spacing: 2), GridItem(spacing: 2)], spacing: 1) {
-                                ForEach(viewStore.state.products, id: \.id) { product in
-                                    
-                                    ZStack(alignment: .topTrailing) {
-                                        CartProductCell(store: Store(initialState: CartProductCellFeature.State(cartProduct: product), reducer: {
-                                            CartProductCellFeature()
-                                        }))
+                            LazyVGrid(columns: [GridItem(spacing: 3), GridItem(spacing: 3)], spacing: 1) {
+                                ForEachStore(
+                                    self.store.scope(
+                                        state: \.cartItems,
+                                        action: ShoppingCartFeature.Action
+                                            .cartItem(id: action:)
+                                    )
+                                ) { productStore in
+                                    CartProductCell(store: productStore)
                                         
-                                        Button(action: {
-                                            viewStore.send(.removeProductButtonTapped(product))
-                                        }) {
-                                            Image(systemName: "multiply.circle.fill")
-                                                .foregroundColor(.red)
-                                                .clipShape(Circle())
-                                        }
-                                    }
                                 }
                             }
                         }
+                        .frame(width: geometry.size.width)
                         
                         Spacer()
                         
@@ -55,6 +50,7 @@ struct ShoppingCartView: View {
                         .background(Color.red)
                         
                         Spacer()
+                        
                     }
                     .frame(height: geometry.size.height)
                     .background(Color(red: 0.97, green: 0.97, blue: 0.97))

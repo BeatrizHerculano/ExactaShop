@@ -12,7 +12,9 @@ import ComposableArchitecture
 struct CartProductCellFeature {
     @Dependency(\.cartDatabase) var database
     
-    struct State: Equatable {
+    struct State: Equatable, Identifiable {
+        let id: UUID
+        
         var cartProduct: CartProduct = .init(
             product: .init(
                 name: "",
@@ -35,6 +37,14 @@ struct CartProductCellFeature {
         case increaseButtonTapped(CartProduct)
         case decreaseButtonTapped(CartProduct)
         case changeQuantity(Int)
+        case removeProductButtonTapped
+        case delegate(DelegateAction)
+    }
+    
+    enum DelegateAction {
+        case quantityChanged
+        case itemRemoved(UUID)
+        
     }
     
     var body: some ReducerOf<Self> {
@@ -58,6 +68,17 @@ struct CartProductCellFeature {
             case .changeQuantity(let quantity):
                 state.cartProduct.quantity = quantity
                 return .none
+                
+            case .delegate(let delegateAction):
+                switch delegateAction{
+                case .quantityChanged:
+                    return .none
+                case .itemRemoved(_):
+                    return .none
+                }
+            
+            case .removeProductButtonTapped:
+                return .send(.delegate(.itemRemoved(state.id)))
             }
         }
     }
