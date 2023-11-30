@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
     case requestFailed
 }
 
-protocol NetworkProtocol{
+public protocol NetworkProtocol{
     func getRequest<T: Decodable>(responseType: T.Type) async -> Result<T, NetworkError>
 }
 
@@ -23,7 +23,7 @@ public class NetworkManager: NetworkProtocol {
     
     init() {}
     
-    func getRequest<T: Decodable>(responseType: T.Type) async -> Result<T, NetworkError> {
+    public func getRequest<T: Decodable>(responseType: T.Type) async -> Result<T, NetworkError> {
         
         guard let url = URL(string: apiURL) else {
             return .failure(.invalidURL)

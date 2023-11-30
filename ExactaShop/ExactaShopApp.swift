@@ -24,9 +24,9 @@ struct ExactaShopApp: App {
     var body: some Scene {
         WindowGroup {
             ProductListView(
-                store: Store(initialState:ListProductsFeature.State(products: []),
+                store: Store(initialState:ProductListFeature.State(products: []),
                 reducer: {
-                ListProductsFeature()
+                ProductListFeature()
             }))
         }
         .modelContext(context())

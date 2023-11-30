@@ -16,11 +16,11 @@ extension DependencyValues {
 
 
 private enum ShoppingCartDatabaseKey: DependencyKey {
-    static let liveValue = CartProductDatabase()
+    static let liveValue: any CartProductDatabaseProtocol = CartProductDatabase()
 }
 
 extension DependencyValues {
-  var cartDatabase: CartProductDatabase {
+  var cartDatabase: CartProductDatabaseProtocol {
     get { self[ShoppingCartDatabaseKey.self] }
     set { self[ShoppingCartDatabaseKey.self] = newValue }
   }
@@ -28,11 +28,11 @@ extension DependencyValues {
 
 
 private enum ProductDatabaseKey: DependencyKey {
-    static let liveValue = ProductDatabase()
+    static let liveValue: any ProductDatabaseProtocol = ProductDatabase()
 }
 
 extension DependencyValues {
-  var productDatabase: ProductDatabase {
+  var productDatabase: ProductDatabaseProtocol {
     get { self[ProductDatabaseKey.self] }
     set { self[ProductDatabaseKey.self] = newValue }
   }

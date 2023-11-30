@@ -13,7 +13,7 @@ struct Products: Decodable {
 }
 
 @Model
-class Product: Equatable, Decodable {
+public class Product: Equatable, Decodable {
     
     var name: String
     var style: String
@@ -44,7 +44,7 @@ class Product: Equatable, Decodable {
         case sizes
     }
     
-    static func == (lhs: Product, rhs: Product) -> Bool {
+    public static func == (lhs: Product, rhs: Product) -> Bool {
         lhs.style == rhs.style
     }
     
@@ -64,7 +64,7 @@ class Product: Equatable, Decodable {
         self.sizes = sizes
     }
     
-    required init(from decoder: Decoder) throws {
+    public required init(from decoder: Decoder) throws {
         
         do {
             let container = try decoder.container(keyedBy: ProductCodingKeys.self)

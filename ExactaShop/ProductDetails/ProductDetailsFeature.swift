@@ -38,9 +38,19 @@ struct ProductDetailsFeature {
         Reduce{ state, action in
             switch action{
             
-            case .addToCart(_):
+            case .addToCart(let product):
+                addProductToCart(product)
                 return .none
             }
         }
     }
+    
+    func addProductToCart(_ product: Product){
+        let existingCartProduct = database.fetch(style: product.style)
+        
+        if(existingCartProduct == nil){
+            database.add(cartProduct: .init(product: product))
+        }
+    }
+    
 }

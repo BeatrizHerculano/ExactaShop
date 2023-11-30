@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class FileLoader{
     static func readJsonFromBundle<T: Decodable>(responseType: T.Type) async -> Result<T, NetworkError>{
         if let path = Bundle.main.path(forResource: "mock", ofType: "json") {

@@ -9,11 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-class CartProduct{
+public class CartProduct{
     
-    var id: UUID { return uuidKey }
+    public var id: UUID { return uuidKey }
         
-    @Attribute(.unique) var uuidKey: UUID = UUID()
+    @Attribute(.unique)
+    var uuidKey: UUID = UUID()
     
     var product: Product
     var quantity: Int

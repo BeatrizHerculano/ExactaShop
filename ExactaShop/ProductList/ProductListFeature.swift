@@ -10,14 +10,14 @@ import ComposableArchitecture
 
 
 @Reducer
-struct ListProductsFeature {
+struct ProductListFeature {
     @Dependency(\.networking) var networking
     @Dependency(\.cartDatabase) var database
     
-    struct State {
+    struct State: Equatable {
         var products: [Product]
     }
-    enum Action {
+    enum Action: Equatable {
         case viewLoaded
         case setProducts([Product])
         case productTapped(Product)
@@ -54,6 +54,7 @@ struct ListProductsFeature {
     
     func addProductToCart(_ product: Product){
         let existingCartProduct = database.fetch(style: product.style)
+        
         if(existingCartProduct == nil){
             database.add(cartProduct: .init(product: product))
         }

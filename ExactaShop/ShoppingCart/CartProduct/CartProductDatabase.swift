@@ -8,7 +8,19 @@
 import Foundation
 import SwiftData
 import Dependencies
-class CartProductDatabase {
+
+
+public protocol CartProductDatabaseProtocol{
+    func add(cartProduct: CartProduct)
+    func remove(style: String)
+    func removeAllData()
+    func count() -> Int
+    func fetch(style: String) -> CartProduct?
+    func fetchAll() -> [CartProduct]
+    func update(cartProduct: CartProduct)
+}
+
+class CartProductDatabase: CartProductDatabaseProtocol {
     
     @Dependency(\.databaseContext.context) var context
     let type = CartProduct.self

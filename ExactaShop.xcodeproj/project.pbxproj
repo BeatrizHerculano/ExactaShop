@@ -31,7 +31,7 @@
 		D0F9B0DF2B112A520024DB61 /* ExactaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0DE2B112A520024DB61 /* ExactaShopTests.swift */; };
 		D0F9B0E92B112A520024DB61 /* ExactaShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */; };
 		D0F9B0EB2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */; };
-		D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */; };
+		D0F9B0F92B1139CC0024DB61 /* ProductListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0F82B1139CC0024DB61 /* ProductListFeature.swift */; };
 		D0F9B0FF2B113C8A0024DB61 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D0F9B0FE2B113C8A0024DB61 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,7 @@
 		D0F9B0E42B112A520024DB61 /* ExactaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExactaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9B0E82B112A520024DB61 /* ExactaShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITests.swift; sourceTree = "<group>"; };
 		D0F9B0EA2B112A520024DB61 /* ExactaShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactaShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsFeature.swift; sourceTree = "<group>"; };
+		D0F9B0F82B1139CC0024DB61 /* ProductListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F9B0CD2B112A500024DB61 /* ProductListView.swift */,
-				D0F9B0F82B1139CC0024DB61 /* ListProductsFeature.swift */,
+				D0F9B0F82B1139CC0024DB61 /* ProductListFeature.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 			files = (
 				D02D4DAF2B14F6B70057D355 /* DatabaseContext.swift in Sources */,
 				D02D4DAD2B14EEA50057D355 /* ProductDatabase.swift in Sources */,
-				D0F9B0F92B1139CC0024DB61 /* ListProductsFeature.swift in Sources */,
+				D0F9B0F92B1139CC0024DB61 /* ProductListFeature.swift in Sources */,
 				D0375C982B165EB10085E0CD /* CartProductCell.swift in Sources */,
 				D0F9B0CE2B112A500024DB61 /* ProductListView.swift in Sources */,
 				D02D4DAB2B1390520057D355 /* DatabaseDependencies.swift in Sources */,
